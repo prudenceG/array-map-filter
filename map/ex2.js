@@ -41,10 +41,36 @@ En sortie: [
 ]
 
  */
+// const tab =[
+//   {
+//     food: 'Bacon',
+//     isVegetarian: false
+//   },
+//   {
+//     food: 'Sausage',
+//     isVegetarian: false
+//   },
+//   {
+//     food: 'Tofu',
+//     isVegetarian: true
+//   },
+//   {
+//     food: 'Chick Pea',
+//     isVegetarian: true
+//   }
+// ]
 
-function getFoodCategories(foods) {
+const getFoodCategories = (foods) => {
+  const vegetarianFood = foods.map(element => {
+    if (element.isVegetarian ) {
+      return `${element.food} is suitable for vegetarians`
+    }
+    else {
+      return `${element.food} is not suitable for vegetarians`
+    }
+  });
+  return vegetarianFood
 }
-
 
 
 // Ne pas modifier l'export

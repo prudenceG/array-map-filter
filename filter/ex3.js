@@ -22,8 +22,12 @@ Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
  */
-
-function keepStarks(names) {
+const keepStarks = (names) => {
+  const stark = names.filter(element => {
+  	return element.endsWith('Stark')   
+  })
+  return stark
+  
 }
 
 // Ne pas modifier l'export

@@ -10,8 +10,12 @@ Sortie attendue:
   [7, 2, 0, 3, 11]
 
  */
-
-function getPositiveNumbers(numbers) {
+ 
+const getPositiveNumbers = (numbers) => {
+  const positiveOrNull = numbers.filter((num, i) => {
+    return num >= 0 ? num + i : "" 
+   })
+   return positiveOrNull
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

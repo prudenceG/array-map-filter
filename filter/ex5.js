@@ -37,9 +37,13 @@ Exemple d'entrée:
 
 
  */
-
-function searchWordFilter(items, search) {
+const searchWordFilter = (items, searching) => {
+  const research = items.filter(element => { 
+  	const regexp = new RegExp(searching, "i");
+   	const researching = element.search(regexp);
+    return researching >= 0 ? element : ''
+  })
+  return research
 }
-
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

@@ -21,7 +21,11 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+const getStringsLength = strings => {
+  const nbCharacters = strings.map((element) => {
+    return `${element} contains ${element.length} characters`
+  });
+  return nbCharacters
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

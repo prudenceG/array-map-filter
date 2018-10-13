@@ -25,8 +25,16 @@ Sortie attendue:
 ]
 
 */
-
-function filterOffensiveComments(comments, bannedWords) {
+const filterOffensiveComments = (comments, bannedWords) => {
+  const banned = comments.filter(element => {
+      const regex = new RegExp(bannedWords[1], 'i')
+      const regex2 = new RegExp(bannedWords[0], 'i')
+      const research = element.search(regex) + element.search(regex2)
+      if (research < 0) {
+      	return element
+      } 
+  })
+  return banned
 }
 
 // Ne pas modifier l'export

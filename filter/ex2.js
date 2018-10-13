@@ -14,8 +14,11 @@ Exemple d'entrée:
   [-10, 5, 15, 20]
 
  */
-
-function getMultiplesOf(numbers, n) {
+const getMultiplesOf = (numbers, n) => {
+  const multiple = numbers.filter((element, i) => {
+    return (element % n == 0) ? element + i: ""
+  })
+  return multiple
 }
 
 // Ne pas modifier l'export

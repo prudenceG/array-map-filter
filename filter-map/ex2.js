@@ -23,8 +23,17 @@ Sortie attendue:
 ['Bordeaux', 'Lille', 'Marseille', 'Reims', 'Toulouse']
 
 */
-
-function getCampusesTeachingReact(campuses) {
+const getCampusesTeachingReact = (tableau) => {
+	let result = []
+  const research = tableau.map(element => {
+  	const cv = element.curriculums
+    return cv.filter(ele => {    	
+   		if (ele.toLowerCase().indexOf("JS/React".toLowerCase()) > -1){      	
+      	 return result.push(element.city)         
+      } 
+    })
+ })
+ return result
 }
 
 module.exports = getCampusesTeachingReact;

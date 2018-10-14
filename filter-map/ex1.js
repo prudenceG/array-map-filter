@@ -21,8 +21,26 @@ Sortie attendue:
 ['Yoda', 'Obiwan Kenobi', 'Mace Windu']
 
 */
+tab = [
+  { name: 'Yoda', side: 'light' },
+  { name: 'Count Dooku', side: 'dark' },
+  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Mace Windu', side: 'light' },
+  { name: 'Darth Sidious', side: 'dark' },
+  { name: 'Darth Maul', side: 'dark' }
+]
 
-function getJedisNames(characters) {
+const getJedisNames = (characters) => {
+  const lumiere = characters.filter(element => {
+    if (element.side == 'light'){
+    	return element
+    }
+  })
+  const jedis = lumiere.map(element => {
+  	return element.name
+  })
+  return jedis
 }
+console.log(getJedisNames(tab))
 
 module.exports = getJedisNames;
